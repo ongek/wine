@@ -20,5 +20,5 @@ jobs:
       # defaultでWorkflowを実行したbranchがcheckoutされる。
       - uses: actions/checkout@v2
 
-      - name: Show Powermetrics
-        run: sudo powermetrics
+      - name: Show CPU
+        run: sysctl machdep.cpu.brand_string
