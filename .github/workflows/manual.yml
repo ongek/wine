@@ -20,5 +20,5 @@ jobs:
       # defaultでWorkflowを実行したbranchがcheckoutされる。
       - uses: actions/checkout@v2
 
-      - name: Show Git Branch
-        run: powermetrics
+      - name: Show Powermetrics
+        run: sudo powermetrics
