@@ -16,9 +16,15 @@ jobs:
     steps:
       - name: Show Xcode version
         run: xcodebuild -version    
+        
+      - name: Show macOS Ver
+        run: sw_vers
 
       # defaultでWorkflowを実行したbranchがcheckoutされる。
       - uses: actions/checkout@v2
 
       - name: Show CPU
         run: sysctl machdep.cpu.brand_string
+        
+      - name: Show GPU
+        run: system_profiler SPDisplaysDataType
